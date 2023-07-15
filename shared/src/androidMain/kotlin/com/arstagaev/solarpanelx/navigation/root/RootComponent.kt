@@ -10,6 +10,8 @@ import com.arstagaev.solarpanelx.navigation.screens.anothertest.IAnotherTestComp
 import com.arstagaev.solarpanelx.navigation.screens.details.DetailsComponent
 import com.arstagaev.solarpanelx.navigation.screens.details.IDetailsComponent
 import com.arstagaev.solarpanelx.navigation.screens.list.ListComponent
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 
 interface IRootComponent {
 
@@ -28,7 +30,7 @@ interface IRootComponent {
 
 class RootComponent(
     componentContext: ComponentContext
-) : IRootComponent, ComponentContext by componentContext {
+) : IRootComponent, ComponentContext by componentContext, KoinComponent {
 
     private val navigation = StackNavigation<Config>()
 
@@ -86,6 +88,7 @@ class RootComponent(
     private fun createAnotherTest(componentContext: ComponentContext): IAnotherTestComponent =
         AnotherTestComponent(
             componentContext = componentContext,
+            useCase = get(),
             onBack = {
                 navigation.pop()
             }

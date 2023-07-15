@@ -20,6 +20,7 @@ private val dbModule = module {
 }
 private val utilityModule = module {
     //factory { provideDispatcher }
+    factory { GetWeatherByCityUseCase() }
 }
 
 private val domainModule = module {
