@@ -1,5 +1,6 @@
 import com.arstagaev.solarpanelx.Deps
 import com.arstagaev.solarpanelx.Configuration
+import com.arstagaev.solarpanelx.Versions
 
 plugins {
     kotlin("multiplatform")
@@ -70,7 +71,7 @@ kotlin {
                 implementation(Deps.Compose.foundation)
                 implementation(Deps.Compose.material)
                 implementation(Deps.Compose.activity)
-                
+
                 implementation(Deps.Ktor.engineClientAndroid)
                 api(Deps.Koin.android)
 
@@ -88,9 +89,9 @@ kotlin {
         val iosMain by creating {
             dependencies{
                 dependsOn(commonMain)
-//                implementation(Deps.Ktor.engineClientDarwin)
-//
-//                implementation(Deps.SQLDelight.nativeDriver)
+                implementation(Deps.Ktor.engineClientDarwin)
+
+                implementation(Deps.SQLDelight.nativeDriver)
             }
             //dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -114,5 +115,20 @@ android {
     compileSdk = Configuration.compileSdk
     defaultConfig {
         minSdk = Configuration.minSdk
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.composeCompiler
+    }
+}
+
+sqldelight {
+    databases {
+        create("WeatherDatabase") {
+            //sqldelight/com/arstagaev/testkmm10/cache/WeatherDatabase.sq
+            packageName.set("com.arstagaev.solarpanelx.cache")
+        }
     }
 }

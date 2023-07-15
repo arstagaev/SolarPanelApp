@@ -5,11 +5,11 @@ import com.arkivanov.decompose.router.stack.*
 import com.arkivanov.decompose.value.Value
 import com.arkivanov.essenty.parcelable.Parcelable
 import com.arkivanov.essenty.parcelable.Parcelize
-import nav.screen.anothertest.AnotherTestComponent
-import nav.screen.anothertest.IAnotherTestComponent
-import nav.screen.details.DetailsComponent
-import nav.screen.details.IDetailsComponent
-import nav.screen.list.ListComponent
+import com.arstagaev.solarpanelx.navigation.screens.anothertest.AnotherTestComponent
+import com.arstagaev.solarpanelx.navigation.screens.anothertest.IAnotherTestComponent
+import com.arstagaev.solarpanelx.navigation.screens.details.DetailsComponent
+import com.arstagaev.solarpanelx.navigation.screens.details.IDetailsComponent
+import com.arstagaev.solarpanelx.navigation.screens.list.ListComponent
 
 interface IRootComponent {
 

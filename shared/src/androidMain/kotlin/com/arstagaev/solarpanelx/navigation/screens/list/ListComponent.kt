@@ -1,4 +1,4 @@
-package nav.screen.list
+package com.arstagaev.solarpanelx.navigation.screens.list
 
 import com.arkivanov.decompose.ComponentContext
 

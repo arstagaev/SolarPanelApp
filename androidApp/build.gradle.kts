@@ -1,5 +1,6 @@
 import com.arstagaev.solarpanelx.Deps
 import com.arstagaev.solarpanelx.Configuration
+import com.arstagaev.solarpanelx.Versions
 
 plugins {
     id("com.android.application")
@@ -20,7 +21,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = Versions.composeCompiler
     }
     packaging {
         resources {

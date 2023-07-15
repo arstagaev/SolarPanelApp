@@ -16,10 +16,9 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
-import com.arstagaev.solarpanelx.navigation.root.IRootComponent
-import nav.screen.anothertest.AnotherTestScreen
-import nav.screen.details.DetailsScreen
-import nav.screen.list.ListScreen
+import com.arstagaev.solarpanelx.navigation.screens.anothertest.AnotherTestScreen
+import com.arstagaev.solarpanelx.navigation.screens.details.DetailsScreen
+import com.arstagaev.solarpanelx.navigation.screens.list.ListScreen
 
 @Composable
 fun RootContent(

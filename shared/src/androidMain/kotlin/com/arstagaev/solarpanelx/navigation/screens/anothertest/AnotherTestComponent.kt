@@ -1,4 +1,4 @@
-package nav.screen.anothertest
+package com.arstagaev.solarpanelx.navigation.screens.anothertest
 
 import com.arkivanov.decompose.ComponentContext
 
