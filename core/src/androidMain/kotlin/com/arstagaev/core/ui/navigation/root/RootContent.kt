@@ -1,5 +1,6 @@
 package com.arstagaev.core.ui.navigation.root
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.BottomNavigation
@@ -13,6 +14,7 @@ import androidx.compose.material.icons.twotone.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
@@ -20,6 +22,7 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
 import com.arstagaev.core.ui.navigation.screens.premium_adv.PremiumAdvScreen
 import com.arstagaev.core.ui.navigation.screens.functionality.FunctionalityScreen
 import com.arstagaev.core.ui.navigation.screens.main_dashboard.MainDashboardScreen
+import com.arstagaev.solarpanelx.colorAnchor
 
 @Composable
 fun RootContent(
@@ -42,7 +45,7 @@ fun RootContent(
                 is IRootComponent.Child.PremiumAdvChild -> PremiumAdvScreen(child.component)
             }
         }
-        BottomNavigation(modifier = Modifier.fillMaxWidth()) {
+        BottomNavigation(modifier = Modifier.fillMaxWidth(), backgroundColor = colorAnchor, contentColor = Color.LightGray) {
             BottomNavigationItem(
                 selected = activeComponent is IRootComponent.Child.MainDashboardChild,
                 onClick = component::onCountersTabClicked,

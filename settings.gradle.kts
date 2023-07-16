@@ -19,5 +19,6 @@ rootProject.name = "Solarpanelx"
 include(":androidApp")
 include(":commonsource")
 include(":feature:f_finance")
-include(":feature:f_example")
+include(":feature:f_power_calc")
+include(":feature:f_custom_ui")
 include(":core")
