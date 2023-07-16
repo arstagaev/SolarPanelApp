@@ -1,6 +1,6 @@
-import com.arstagaev.solarpanelx.Deps
-import com.arstagaev.solarpanelx.Configuration
-import com.arstagaev.solarpanelx.Versions
+import com.arstagaev.gradle.Deps
+import com.arstagaev.gradle.Configuration
+import com.arstagaev.gradle.Versions
 
 plugins {
     id("com.android.application")
@@ -9,11 +9,11 @@ plugins {
 
 android {
     namespace = "com.arstagaev.solarpanelx.android"
-    compileSdk = Configuration.compileSdk
+    compileSdk = com.arstagaev.gradle.Configuration.compileSdk
     defaultConfig {
         applicationId = "com.arstagaev.solarpanelx.android"
-        minSdk = Configuration.minSdk
-        targetSdk = Configuration.targetSdk
+        minSdk = com.arstagaev.gradle.Configuration.minSdk
+        targetSdk = com.arstagaev.gradle.Configuration.targetSdk
         versionCode = 1
         versionName = "1.0"
     }
@@ -21,7 +21,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.composeCompiler
+        kotlinCompilerExtensionVersion = com.arstagaev.gradle.Versions.composeCompiler
     }
     packaging {
         resources {
@@ -43,7 +43,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":commonsource"))
+    implementation(project(":core"))
     implementation("androidx.compose.ui:ui:1.4.3")
     implementation("androidx.compose.ui:ui-tooling:1.4.3")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
@@ -51,6 +52,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.activity:activity-compose:1.7.1")
 
-    implementation(Deps.Decompose.main)
-    implementation(Deps.Decompose.ext)
+    implementation(com.arstagaev.gradle.Deps.Decompose.main)
+    implementation(com.arstagaev.gradle.Deps.Decompose.ext)
+
 }

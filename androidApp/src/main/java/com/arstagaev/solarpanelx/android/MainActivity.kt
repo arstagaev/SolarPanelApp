@@ -5,12 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.arkivanov.decompose.defaultComponentContext
-import com.arstagaev.solarpanelx.navigation.root.RootComponent
-import com.arstagaev.solarpanelx.navigation.root.RootContent
+import com.arstagaev.core.ui.navigation.root.RootComponent
+import com.arstagaev.core.ui.navigation.root.RootContent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

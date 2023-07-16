@@ -17,4 +17,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Solarpanelx"
 include(":androidApp")
-include(":shared")
+include(":commonsource")
+include(":feature:f_finance")
+include(":feature:f_example")
+include(":core")
