@@ -39,47 +39,44 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-
-
                 // for domain logic actually
-                implementation(com.arstagaev.gradle.Deps.Coroutines.core)
-                implementation(com.arstagaev.gradle.Deps.Ktor.core)
-                implementation(com.arstagaev.gradle.Deps.Ktor.clientContentNegotiation)
-                implementation(com.arstagaev.gradle.Deps.Ktor.serializationKotlinxJson)
-                implementation(com.arstagaev.gradle.Deps.Ktor.clientLogging)
-                api(com.arstagaev.gradle.Deps.Koin.core)
-                implementation(com.arstagaev.gradle.Deps.Serialization.json)
+                implementation(Deps.Coroutines.core)
+                implementation(Deps.Ktor.core)
+                implementation(Deps.Ktor.clientContentNegotiation)
+                implementation(Deps.Ktor.serializationKotlinxJson)
+                implementation(Deps.Ktor.clientLogging)
+                api(Deps.Koin.core)
+                implementation(Deps.Serialization.json)
 
 
 
-                with(com.arstagaev.gradle.Deps.SQLDelight) {
+                with(Deps.SQLDelight) {
                     api(coroutinesExtensions)
                     api(primitiveAdapters)
                 }
                 // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-datetime
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
-
             }
         }
 
         val androidMain by getting {
             dependencies {
                 // ui
-                implementation(com.arstagaev.gradle.Deps.Compose.ui)
-                implementation(com.arstagaev.gradle.Deps.Compose.uiTooling)
-                implementation(com.arstagaev.gradle.Deps.Compose.uiToolingPreview)
-                implementation(com.arstagaev.gradle.Deps.Compose.foundation)
-                implementation(com.arstagaev.gradle.Deps.Compose.material)
-                implementation(com.arstagaev.gradle.Deps.Compose.activity)
+                implementation(Deps.Compose.ui)
+                implementation(Deps.Compose.uiTooling)
+                implementation(Deps.Compose.uiToolingPreview)
+                implementation(Deps.Compose.foundation)
+                implementation(Deps.Compose.material)
+                implementation(Deps.Compose.activity)
 
-                implementation(com.arstagaev.gradle.Deps.Ktor.engineClientAndroid)
-                api(com.arstagaev.gradle.Deps.Koin.android)
+                implementation(Deps.Ktor.engineClientAndroid)
+                api(Deps.Koin.android)
 
-                implementation(com.arstagaev.gradle.Deps.Decompose.main)
-                implementation(com.arstagaev.gradle.Deps.Decompose.ext)
+                implementation(Deps.Decompose.main)
+                implementation(Deps.Decompose.ext)
 
                 // SqlDelight
-                implementation(com.arstagaev.gradle.Deps.SQLDelight.androidDriver)
+                implementation(Deps.SQLDelight.androidDriver)
                 // Chart:
                 // Includes the core logic for charts and other elements.
                 implementation( "com.patrykandpatrick.vico:core:1.7.1")
@@ -96,9 +93,9 @@ kotlin {
         val iosMain by creating {
             dependencies{
                 dependsOn(commonMain)
-                implementation(com.arstagaev.gradle.Deps.Ktor.engineClientDarwin)
+                implementation(Deps.Ktor.engineClientDarwin)
 
-                implementation(com.arstagaev.gradle.Deps.SQLDelight.nativeDriver)
+                implementation(Deps.SQLDelight.nativeDriver)
             }
             //dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -119,15 +116,15 @@ kotlin {
 
 android {
     namespace = "com.arstagaev.solarpanelx"
-    compileSdk = com.arstagaev.gradle.Configuration.compileSdk
+    compileSdk = Configuration.compileSdk
     defaultConfig {
-        minSdk = com.arstagaev.gradle.Configuration.minSdk
+        minSdk = Configuration.minSdk
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = com.arstagaev.gradle.Versions.composeCompiler
+        kotlinCompilerExtensionVersion = Versions.composeCompiler
     }
 }
 
