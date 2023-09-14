@@ -72,8 +72,7 @@ kotlin {
                 implementation(Deps.Ktor.engineClientAndroid)
                 api(Deps.Koin.android)
 
-                implementation(Deps.Decompose.main)
-                implementation(Deps.Decompose.ext)
+
 
                 // SqlDelight
                 implementation(Deps.SQLDelight.androidDriver)

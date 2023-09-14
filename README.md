@@ -1,4 +1,9 @@
-*App for Solar panels*
+# *App for Solar panels*
 
+SQLDelight, Ktor, Decompose, Multi-module structure
 
-In the process of development..
+<table style= padding:10px">
+  <tr>
+    <td>  <img src="./demo/demo_sol.png"  alt="1" width = 800px > </td>
+  </tr>
+</table>
