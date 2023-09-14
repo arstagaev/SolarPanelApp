@@ -1,4 +1,4 @@
-# *App for Solar panels*
+# *App for Solar panels* (Now in Developing)
 
 SQLDelight, Ktor, Decompose, Multi-module structure
 
