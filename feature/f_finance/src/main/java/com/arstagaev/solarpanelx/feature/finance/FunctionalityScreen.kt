@@ -1,4 +1,4 @@
-package com.arstagaev.solarpanelx.feature.functionality
+package com.arstagaev.solarpanelx.feature.finance
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

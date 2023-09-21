@@ -25,6 +25,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.arstagaev.solarpanelx.colorDashboardDown
@@ -83,9 +85,7 @@ fun MainDashboardScreen(component: MainDashboardComponent) {
                             modifier = Modifier.height(IntrinsicSize.Min),
                             text = "64",
                             color = Color.White,
-                            fontFamily = FontFamily.Default,
-                            fontStyle = FontStyle.Normal,
-                            fontSize = 60.sp
+                            fontFamily = FontFamily.Default, fontSize = 60.sp, fontWeight = FontWeight.Bold,textAlign = TextAlign.Center,
                         )
                         Text(
                             modifier = Modifier.padding(bottom = 9.dp),

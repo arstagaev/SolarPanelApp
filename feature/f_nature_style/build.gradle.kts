@@ -1,9 +1,8 @@
 import com.arstagaev.gradle.Deps
-import com.arstagaev.gradle.Configuration
-import com.arstagaev.gradle.Versions
 
 plugins {
-    id("com.android.application")
+    //`kotlin-dsl`
+    id("com.android.library")
     kotlin("android")
 }
 
@@ -11,11 +10,11 @@ android {
     namespace = "com.arstagaev.solarpanelx.android"
     compileSdk = com.arstagaev.gradle.Configuration.compileSdk
     defaultConfig {
-        applicationId = "com.arstagaev.solarpanelx.android"
+        //applicationId = "com.arstagaev.solarpanelx.android"
         minSdk = com.arstagaev.gradle.Configuration.minSdk
         targetSdk = com.arstagaev.gradle.Configuration.targetSdk
-        versionCode = 1
-        versionName = "1.0"
+        //versionCode = 1
+        //versionName = "1.0"
     }
     buildFeatures {
         compose = true
@@ -42,17 +41,29 @@ android {
     }
 }
 
+repositories {
+    google()
+    gradlePluginPortal()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    mavenCentral()
+}
+//kotlin {
+//    sourceSets()
+//}
 dependencies {
+    implementation(project(":commonsource"))
+    // ui
+    implementation(Deps.Compose.ui)
+    implementation(Deps.Compose.uiTooling)
+    implementation(Deps.Compose.uiToolingPreview)
+    implementation(Deps.Compose.foundation)
+    implementation(Deps.Compose.material)
+    implementation(Deps.Compose.activity)
 
-    implementation(project(":core"))
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.compose.foundation:foundation:1.4.3")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation(Deps.Ktor.engineClientAndroid)
+    api(Deps.Koin.android)
 
     implementation(Deps.Decompose.main)
     implementation(Deps.Decompose.ext)
-
+    implementation(Deps.KotlinX.dateTime)
 }

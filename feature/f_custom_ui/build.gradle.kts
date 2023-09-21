@@ -53,11 +53,11 @@ repositories {
 dependencies {
     implementation(project(":commonsource"))
     // ui
-    implementation(com.arstagaev.gradle.Deps.Compose.ui)
-    implementation(com.arstagaev.gradle.Deps.Compose.uiTooling)
-    implementation(com.arstagaev.gradle.Deps.Compose.uiToolingPreview)
-    implementation(com.arstagaev.gradle.Deps.Compose.foundation)
-    implementation(com.arstagaev.gradle.Deps.Compose.material)
-    implementation(com.arstagaev.gradle.Deps.Compose.activity)
+    implementation(Deps.Compose.ui)
+    implementation(Deps.Compose.uiTooling)
+    implementation(Deps.Compose.uiToolingPreview)
+    implementation(Deps.Compose.foundation)
+    implementation(Deps.Compose.material)
+    implementation(Deps.Compose.activity)
 
 }

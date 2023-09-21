@@ -1,4 +1,4 @@
-package com.arstagaev.solarpanelx.feature.functionality
+package com.arstagaev.solarpanelx.feature.nature_style
 
 import com.arkivanov.decompose.ComponentContext
 

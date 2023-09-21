@@ -32,7 +32,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":commonsource"))
-                //put your multiplatform dependencies here
+
+                //implementation(project(":feature:f_finance"))
+                //implementation(project(":feature:f_custom_ui"))
             }
         }
         val commonTest by getting {
@@ -44,9 +46,9 @@ kotlin {
         val androidMain by getting {
             dependencies {
 
-
                 implementation(project(":feature:f_finance"))
                 implementation(project(":feature:f_custom_ui"))
+
                 // ui
                 implementation(com.arstagaev.gradle.Deps.Compose.ui)
                 implementation(com.arstagaev.gradle.Deps.Compose.uiTooling)

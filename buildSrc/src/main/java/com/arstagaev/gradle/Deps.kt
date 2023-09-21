@@ -1,15 +1,14 @@
 package com.arstagaev.gradle
 
-import com.arstagaev.gradle.Versions
-
 object Deps {
 
     object Coroutines {
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     }
 
-    object Serialization {
-        const val json = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}"
+    object KotlinX {
+        const val serializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization}"
+        const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:0.4.0"
     }
 
     object KotlinWrappers {

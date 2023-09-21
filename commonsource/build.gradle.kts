@@ -46,7 +46,7 @@ kotlin {
                 implementation(Deps.Ktor.serializationKotlinxJson)
                 implementation(Deps.Ktor.clientLogging)
                 api(Deps.Koin.core)
-                implementation(Deps.Serialization.json)
+                implementation(Deps.KotlinX.serializationJson)
 
 
 

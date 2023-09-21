@@ -1,10 +1,5 @@
 package com.arstagaev.core
 
-interface Platform {
-    val name: String
+enum class Platform {
+    ANDROID, IOS, DESKTOP
 }
-
-//expect fun getPlatform(): Platform
-
-//app -> core -> commonsource (domain+data)
-//            -> feature
